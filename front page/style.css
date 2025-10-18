@@ -1,0 +1,46 @@
+body {
+  background: #17182C;
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-container {
+  display: flex;
+  gap: 2.2rem;
+  margin: 50px 0;
+}
+.role-card {
+  background: #23223b;
+  border-radius: 28px;
+  min-width: 350px;
+  padding: 2.5rem 2.2rem 2.7rem 2.2rem;
+  text-align: center;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.42);
+  position: relative;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.role-card.student { border: 3.5px solid #ff5db1; box-shadow: 0 0 30px 2px #ff5db166; }
+.role-card.professor { border: 3.5px solid #27e1fa; box-shadow: 0 0 30px 2px #27e1fa66; }
+.role-card.company { border: 3.5px solid #ffdc5e; box-shadow: 0 0 30px 2px #ffdc5e66; }
+.role-card:hover { transform: translateY(-7px) scale(1.035); }
+.card-icon { margin: 0 auto 1.1rem auto; height: 56px; }
+.role-card h2 { color: #fff; font-size: 1.5rem; margin-bottom: 0.65rem; }
+.role-card p { color: #bdbddd; font-size: 1.09rem; margin-bottom: 2.2rem; }
+.role-btn { width: 85%; border-radius: 20px; font-size: 1.15rem; font-weight: 700; padding: 0.85rem 0; border: none; cursor: pointer; margin: 0 auto;box-shadow: 0 2px 18px -7px #4443;transition: box-shadow 0.12s, filter 0.13s; }
+.student-btn { background: linear-gradient(90deg, #ff5db1, #ff8c3f); color: #fff; }
+.professor-btn { background: linear-gradient(90deg, #27e1fa, #20bfea); color: #fff; }
+.company-btn { background: linear-gradient(90deg, #ffdc5e, #ffb100); color: #232323; }
+.role-btn:hover { box-shadow: 0 4px 22px 2px #6663; filter: brightness(1.08); }
+
+@media (max-width: 1024px) {
+  .role-container { gap: 1rem; }
+  .role-card { min-width: 220px; }
+}
+@media (max-width: 650px) {
+  .role-container { flex-direction: column; align-items: center; }
+  .role-card { width: 98vw; }
+}

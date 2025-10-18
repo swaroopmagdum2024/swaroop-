@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Role Based Google Login</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body style="background: #17182C;">
+  <div class="role-container">
+    <div class="role-card student">
+      <div class="card-icon"><img src="https://img.icons8.com/color/96/000000/backpack.png" height="56" /></div>
+      <h2>I'm a Student</h2>
+      <p>Unlock Learning & Opportunities</p>
+      <button id="studentLoginBtn" class="role-btn student-btn">Student Login</button>
+    </div>
+    <div class="role-card professor">
+      <div class="card-icon"><img src="https://img.icons8.com/color/96/000000/idea.png" height="56"/></div>
+      <h2>I'm a Professor</h2>
+      <p>Inspire & Collaborate</p>
+      <button id="professorLoginBtn" class="role-btn professor-btn">Professor Login</button>
+    </div>  
+    <div class="role-card company">
+      <div class="card-icon"><img src="https://img.icons8.com/color/96/000000/sun.png" height="56"/></div>
+      <h2>I'm a Company</h2>
+      <p>Discover & Innovate</p>
+      <button id="companyLoginBtn" class="role-btn company-btn">Company Login</button>
+    </div>
+  </div>
+<script>
+const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID'; // Replace with your actual client id!
+function startGoogleOAuth(role) {
+  const redirectUri = window.location.origin + "/dashboard.html?role=" + encodeURIComponent(role);
+  const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=openid%20email%20profile&prompt=select_account`;
+  window.location.href = oauthUrl;
+}
+document.getElementById("studentLoginBtn").onclick = () => startGoogleOAuth("student");
+document.getElementById("professorLoginBtn").onclick = () => startGoogleOAuth("professor");
+document.getElementById("companyLoginBtn").onclick = () => startGoogleOAuth("company");     
+</script>
+</body>
+</html>
+  
