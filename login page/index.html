@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Login with Google and Email</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h2>Log in or sign up</h2>
+    <p class="sub-heading">Lets begin a new journey </p>
+
+    <div id="welcome-screen" class="screen active">
+      <div class="btn-group">
+        <button id="signInBtn" class="main-btn solid">Sign In</button>
+        <button id="signUpBtn" class="main-btn outline">Sign Up</button>
+      </div>
+    </div>
+
+    <form id="signInForm" class="screen">
+    
+      <input type="email" id="signInEmail" placeholder="Email Address" required />
+    
+      <input type="password" id="signInPassword" placeholder="Password" required />
+      <button type="submit" class="main-btn solid">Sign In</button>
+      <p class="message" id="signInMessage"></p>
+      <p><a href="#" id="backToWelcomeFromSignIn">Back</a></p>
+    </form>
+
+    <form id="signUpForm" class="screen">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="signUpEmail" placeholder="Email Address" required />
+      <input type="password" id="signUpPassword" placeholder="Password" required />
+      <button type="submit" class="main-btn solid">Sign Up</button>
+      <p class="message" id="signUpMessage"></p>
+      <p><a href="#" id="backToWelcomeFromSignUp">Back</a></p>
+    </form>
+
+    <div id="profileScreen" class="screen">
+      <h3>Welcome, <span id="userFullName"></span></h3>
+      <p>Email: <span id="userEmailDisplay"></span></p>
+      <button id="logoutBtn" class="main-btn outline">Logout</button>
+    </div>
+
+    <div class="custom-underline"></div>
+
+    <button id="googleSignIn" class="google-btn">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-icon"/>
+      <span>Sign in with Google</span>
+    </button>
+
+  
+
+  <script src="main.js"></script>
+</body>
+</html>

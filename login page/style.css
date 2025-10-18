@@ -1,0 +1,157 @@
+body {
+  background: #fafbfc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.container {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(60,60,60,0.08);
+  width: 400px;
+  max-width: 95vw;
+  padding: 36px 28px 44px 28px;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.sub-heading {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.main-btn {
+  padding: 14px 32px;
+  border-radius: 24px;
+  font-size: 1.13rem;
+  font-weight: 600;
+  border: 1.5px solid #222;
+  cursor: pointer;
+  background: #fff;
+  color: #222;
+  transition: 0.2s;
+}
+.main-btn.solid {
+  background: #111;
+  color: #fff;
+  border: none;
+}
+.main-btn.outline:hover, .main-btn.solid:hover {
+  box-shadow: 0 0 10px #6366f188;
+}
+
+.custom-underline {
+  margin: 32px auto 0 auto;
+  width: 80%;
+  height: 8px;
+  border-radius: 6px;
+  background: #222;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 28px auto 0 auto;
+  width: 80%;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  height: 56px;
+  box-shadow: 0 2px 16px -6px #8882;
+  background: linear-gradient(90deg, #f6b9b9 0%, #b3b4da 100%);
+  color: #272343;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.google-btn:hover {
+  box-shadow: 0 4px 24px 0px #6480ff55;
+  opacity: 0.95;
+}
+
+.google-icon {
+  height: 32px;
+  margin-right: 16px;
+  margin-left: -6px;
+}
+.google-btn span {
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.screen {
+  display: none;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 25px;
+  border: 1.5px solid #7a8be833;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #6366f1;
+}
+
+.message {
+  font-size: 0.95rem;
+  color: red;
+  margin: 8px 0 12px 0;
+  height: 20px;
+}
+
+a {
+  color: #6366f1;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 98vw;
+    min-width: 210px;
+    padding: 18px 4vw 32px 4vw;
+  }
+  .google-btn, .custom-underline { width: 98vw; }
+}
